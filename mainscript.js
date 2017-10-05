@@ -21,7 +21,7 @@ window.onload = function (){
           document.getElementById("weathericon").innerHTML =
           '<img src='+weatherObj.weather[0].icon+' />';
           document.getElementById("temperature").innerHTML =
-          "<p>"+ Math.round(weatherObj.main.temp)+"C</p>";
+          "<p>"+ Math.round(weatherObj.main.temp)+"&deg;C</p>";
 
         }
     };
