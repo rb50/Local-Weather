@@ -13,13 +13,16 @@ window.onload = function (){
     "<br>Longitude: " + position.coords.longitude;
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function() {
-        console.log(position);
-        console.log(xhr);
 
         if (xhr.readyState == 4 && xhr.status == 200) {
           var weatherObj = JSON.parse(xhr.responseText);
           document.getElementById("weathertext").innerHTML =
           weatherObj.weather[0].description;
+          document.getElementById("weathericon").innerHTML =
+          '<img src='+weatherObj.weather[0].icon+' />';
+          document.getElementById("temperature").innerHTML =
+          "<p>"+ Math.round(weatherObj.main.temp)+"C</p>";
+
         }
     };
 
