@@ -9,8 +9,7 @@ window.onload = function (){
 
   }
   function showPosition(position) {
-    x.innerHTML = "Latitude: " + position.coords.latitude +
-    "<br>Longitude: " + position.coords.longitude;
+  
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function() {
 
